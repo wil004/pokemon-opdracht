@@ -14,7 +14,7 @@ Electric ⚡.
 Naast hun type, hebben Pokèmon natuurlijk bepaalde eigenschappen met elkaar gemeen. Daarom maken we gebruik van een
 Super klasse.
 
-![Pokemon!](./assets/pokemon.JPG)
+![Pokemon.Pokemon!](./assets/pokemon.JPG)
 
 ## Randvoorwaarden
 
@@ -69,8 +69,8 @@ Het is uitdagender om jouw eigen stappenplan te maken, maar als je niet weet waa
 5. Maak de volgende subklassen aan en laat deze voldoen aan de gestelde randvoorwaarden (
    zie: [randvoorwaarden](#randvoorwaarden)):
 
-- `FirePokemon`
-- `WaterPokemon`
+- `Pokemon.Pokemon.FirePokemon`
+- `Pokemon.WaterPokemon`
 - `GrassPokemon`
 - `ElectricPokemon`
 

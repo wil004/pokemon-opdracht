@@ -1,0 +1,26 @@
+package Ability.WaterAbilities;
+import Ability.WaterAbility;
+import Pokemon.Pokemon;
+
+
+public class WaterPump extends WaterAbility {
+    private final int damage;
+    private final String abilityName;
+
+    public WaterPump(Pokemon waterPokemon) {
+        super(waterPokemon);
+        int baseDamage = 50;
+        this.damage = baseDamage + waterPokemon.getStats().getAttack() / waterPokemon.getStats().getAttackFactor();
+        this.abilityName = "WaterPump";
+    }
+
+    @Override
+    public int getDamage() {
+        return damage;
+    };
+
+    @Override
+    public String getAbilityName() {
+        return abilityName;
+    };
+}
