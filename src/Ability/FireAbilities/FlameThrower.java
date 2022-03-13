@@ -10,7 +10,7 @@ public class FlameThrower extends FireAbility {
     public FlameThrower(Pokemon firePokemon) {
         super(firePokemon);
         int baseDamage = 50;
-        this.damage = baseDamage + firePokemon.getStats().getAttack() / firePokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "FlameThrower";
     }
 

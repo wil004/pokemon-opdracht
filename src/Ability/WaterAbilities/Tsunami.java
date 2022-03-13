@@ -10,7 +10,7 @@ public class Tsunami extends WaterAbility {
     public Tsunami(Pokemon waterPokemon) {
         super(waterPokemon);
         int baseDamage = 110;
-        this.damage = baseDamage + waterPokemon.getStats().getAttack() / waterPokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "Tsunami";
     }
 

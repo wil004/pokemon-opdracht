@@ -3,20 +3,35 @@ import Fight.Fight;
 import Pokemon.Pokemon;
 import Pokemon.FirePokemon;
 import Pokemon.WaterPokemon;
+import Pokemon.ElectricPokemon;
+import Pokemon.GrassPokemon;
 
 public class Main {
     public static void main(String[] args) {
-        Pokemon charmander = new FirePokemon("charmander", 30);
+        Pokemon charmander = new FirePokemon("charmander", 5);
 
-        Pokemon squirtle = new WaterPokemon("squirtle", 30);
+        Pokemon bulbasaur = new GrassPokemon("bulbasaur" , 12);
 
-        LearnNewAbility learn = new LearnNewAbility(charmander);
-        LearnNewAbility learn2 = new LearnNewAbility(squirtle);
+        Pokemon squirtle = new WaterPokemon("squirtle", 5);
 
-        Fight pokemonBattle = new Fight(charmander, squirtle);
+        Pokemon pikachu = new ElectricPokemon("pikachu" , 3);
 
-        pokemonBattle.stats();
+        LearnNewAbility charmanderMoves = new LearnNewAbility(charmander);
+        LearnNewAbility squirtleMoves = new LearnNewAbility(squirtle);
+        LearnNewAbility bulbasaurMoves = new LearnNewAbility(bulbasaur);
+        LearnNewAbility pikachuMoves = new LearnNewAbility(pikachu);
 
+
+        Fight pokemonBattle = new Fight(charmander, bulbasaur);
+        charmander.getStats().stats(charmander);
+        bulbasaur.getStats().stats(bulbasaur);
+        pokemonBattle.beginner();
         pokemonBattle.pokemonBattle();
+
+        Fight pokemonBattle2 = new Fight(squirtle, pikachu);
+        squirtle.getStats().stats(charmander);
+        pikachu.getStats().stats(bulbasaur);
+        pokemonBattle2.beginner();
+        pokemonBattle2.pokemonBattle();
     }
 }

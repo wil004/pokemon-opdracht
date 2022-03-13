@@ -1,17 +1,16 @@
-package Ability.WaterAbilities;
-import Ability.WaterAbility;
-import Pokemon.Pokemon;
+package Ability.ElectricAbilities;
+        import Ability.ElectricAbility;
+        import Pokemon.Pokemon;
 
-
-public class WaterPump extends WaterAbility {
+public class Spark extends ElectricAbility {
     private final int damage;
     private final String abilityName;
 
-    public WaterPump(Pokemon waterPokemon) {
-        super(waterPokemon);
-        int baseDamage = 50;
+    public Spark(Pokemon electricPokemon) {
+        super(electricPokemon);
+        int baseDamage = 20;
         this.damage = baseDamage + getDamageCalculation();
-        this.abilityName = "WaterPump";
+        this.abilityName = "Spark";
     }
 
     @Override

@@ -2,6 +2,7 @@ package Fight;
 
 import Pokemon.Pokemon;
 import Stats.DamageCalculation;
+import Stats.ExperienceCalculation;
 
 import java.util.Scanner;
 
@@ -16,20 +17,10 @@ public class Fight {
     public Fight(Pokemon pokemon1, Pokemon pokemon2) {
         this.pokemon1 = pokemon1;
         this.pokemon2 = pokemon2;
-        this.battle = new DamageCalculation(pokemon1, pokemon2);
+        this.battle = new DamageCalculation();
     }
 
-    public void stats() {
-        System.out.println(pokemon1.getName() + " has " + (this.pokemon2.getStats().getSpeed() + 1) + " speed!");
-        System.out.println(pokemon1.getName() + " has " + this.pokemon1.getStats().getAttack() + " attack!");
-        System.out.println(pokemon1.getName() + " has " + this.pokemon1.getStats().getDefence() + " defence!");
-        System.out.println(pokemon1.getName() + " has " + this.pokemon1.getStats().getHp() + " health points!");
-        System.out.println("-----------------------------");
-        System.out.println(pokemon2.getName() + " has " + this.pokemon2.getStats().getSpeed() + " speed!");
-        System.out.println(pokemon2.getName() + " has " + this.pokemon2.getStats().getAttack() + " attack!");
-        System.out.println(pokemon2.getName() + " has " + this.pokemon2.getStats().getDefence() + " defence!");
-        System.out.println(pokemon2.getName() + " has " + this.pokemon2.getStats().getHp() + " health points!");
-        System.out.println("------------------------------");
+    public void beginner() {
         if ((pokemon1.getStats().getSpeed() + 1) > pokemon2.getStats().getSpeed()) {
             System.out.println(pokemon1.getName() + " begins!");
         } else {
@@ -38,6 +29,8 @@ public class Fight {
     }
 
     public void pokemonBattle() {
+        ExperienceCalculation pokemon1Xp = new ExperienceCalculation(this.pokemon1);
+        ExperienceCalculation pokemon2Xp = new ExperienceCalculation(this.pokemon2);
         System.out.println("Pokemon Battle starts");
         while (pokemon1Alive && pokemon2Alive) {
             if ((pokemon1.getStats().getSpeed() + 1) > pokemon2.getStats().getSpeed()) {
@@ -47,7 +40,7 @@ public class Fight {
                         System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
                     }
                     int pokemon1Input = userInput.nextInt();
-                    battle.pokemon1Attacks(pokemon1Input);
+                    battle.pokemonAttack(pokemon1Input, pokemon1, pokemon2);
                 }
                 if (pokemon2.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon2.getName() + " choose an attack: ");
@@ -55,7 +48,7 @@ public class Fight {
                         System.out.println("Typ: " + i + " voor " + pokemon2.getAbilities().get(i).getAbilityName());
                     }
                     int pokemon2Input = userInput.nextInt();
-                    battle.pokemon2Attacks(pokemon2Input);
+                    battle.pokemonAttack(pokemon2Input, pokemon2, pokemon1);
                 }
             } else {
                 if (pokemon2.getStats().getCurrentHp() > 0) {
@@ -64,7 +57,7 @@ public class Fight {
                         System.out.println("Typ: " + i + " voor " + pokemon2.getAbilities().get(i).getAbilityName());
                     }
                     int pokemon2Input = userInput.nextInt();
-                    battle.pokemon2Attacks(pokemon2Input);
+                    battle.pokemonAttack(pokemon2Input, pokemon2, pokemon1);
                 }
 
                 if (pokemon1.getStats().getCurrentHp() > 0) {
@@ -73,17 +66,20 @@ public class Fight {
                         System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
                     }
                     int pokemon1Input = userInput.nextInt();
-                    battle.pokemon1Attacks(pokemon1Input);
+                    battle.pokemonAttack(pokemon1Input, pokemon1, pokemon2);
                 }
             };
             if (pokemon1.getStats().getCurrentHp() <= 0) {
                 this.pokemon1Alive = false;
                 System.out.println(pokemon1.getName() + " died!");
                 System.out.println(pokemon2.getName() + " won!");
+                pokemon1Xp.gainExperience(pokemon2, pokemon1);
             } else if (pokemon2.getStats().getCurrentHp() <= 0) {
                 this.pokemon2Alive = false;
                 System.out.println(pokemon2.getName() + " died!");
                 System.out.println(pokemon1.getName() + " won!");
+                pokemon2Xp.gainExperience(pokemon1, pokemon2);
+
             }
         }
     }

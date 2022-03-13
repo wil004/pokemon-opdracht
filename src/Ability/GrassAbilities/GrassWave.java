@@ -1,17 +1,17 @@
-package Ability.WaterAbilities;
-import Ability.WaterAbility;
+package Ability.GrassAbilities;
+import Ability.GrassAbility;
 import Pokemon.Pokemon;
 
 
-public class WaterPump extends WaterAbility {
+public class GrassWave extends GrassAbility {
     private final int damage;
     private final String abilityName;
 
-    public WaterPump(Pokemon waterPokemon) {
-        super(waterPokemon);
-        int baseDamage = 50;
+    public GrassWave(Pokemon grassPokemon) {
+        super(grassPokemon);
+        int baseDamage = 30;
         this.damage = baseDamage + getDamageCalculation();
-        this.abilityName = "WaterPump";
+        this.abilityName = "GrassWave";
     }
 
     @Override

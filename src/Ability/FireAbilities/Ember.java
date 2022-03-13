@@ -9,7 +9,7 @@ public class Ember extends FireAbility {
     public Ember(Pokemon firePokemon) {
         super(firePokemon);
         int baseDamage = 20;
-        this.damage = baseDamage + firePokemon.getStats().getAttack() / firePokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "ember";
     }
 

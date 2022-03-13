@@ -5,27 +5,27 @@ import Ability.Ability;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirePokemon extends Pokemon {
+public class GrassPokemon extends Pokemon {
     private final String type;
     private final List<String> weakness;
     private final List<String> strength;
 
-    public FirePokemon(String name, int level) {
+    public GrassPokemon(String name, int level) {
         super(name, level);
         weakness = new ArrayList<>();
         strength = new ArrayList<>();
-        type = "fire";
-        weakness.add("water");
-        weakness.add("rock");
-        strength.add("grass");
-        strength.add("fire");
+        type = "grass";
+        weakness.add("fire");
+        weakness.add("air");
+        strength.add("water");
+        strength.add("electric");
     }
 
 
     @Override
-    public void addAbility(Ability fireAbility) {
-        if(fireAbility.getType().equalsIgnoreCase("fire")) {
-            getAbilities().add(fireAbility);
+    public void addAbility(Ability grassAbility) {
+        if(grassAbility.getType().equalsIgnoreCase("grass")) {
+            getAbilities().add(grassAbility);
         } else {
             System.out.println("This pokemon cannot learn this ability");
         }
@@ -39,6 +39,8 @@ public class FirePokemon extends Pokemon {
     public String getType() {
         return type;
     }
+
+
 
     public List<String> getWeakness() {
         return weakness;

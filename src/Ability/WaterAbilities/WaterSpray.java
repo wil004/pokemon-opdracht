@@ -10,7 +10,7 @@ public class WaterSpray extends WaterAbility {
     public WaterSpray(Pokemon waterPokemon) {
         super(waterPokemon);
         int baseDamage = 20;
-        this.damage = baseDamage + waterPokemon.getStats().getAttack() / waterPokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "WaterSpray";
     }
 
