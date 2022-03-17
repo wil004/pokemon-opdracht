@@ -9,7 +9,7 @@ public class GrassStorm extends GrassAbility {
 
     public GrassStorm(Pokemon grassPokemon) {
         super(grassPokemon);
-        int baseDamage = 80;
+        int baseDamage = 85;
         this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "GrassStorm";
     }

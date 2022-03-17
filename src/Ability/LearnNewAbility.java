@@ -30,7 +30,7 @@ public class LearnNewAbility {
                     case 10 -> pokemon.addAbility(new WaterPump(pokemon));
                     case 15 -> pokemon.addAbility(new PressurePump(pokemon));
                     case 20 -> pokemon.getAbilities().set(0, new HydroPump(pokemon));
-                    case 25 -> pokemon.getAbilities().set(0, new Tsunami(pokemon));
+                    case 25 -> pokemon.getAbilities().set(1, new Tsunami(pokemon));
                 }
             }
         } else if (pokemon.getType().equalsIgnoreCase("grass")){
@@ -41,7 +41,7 @@ public class LearnNewAbility {
                     case 10 -> pokemon.addAbility(new Absorb(pokemon));
                     case 15 -> pokemon.addAbility(new SeedBlast(pokemon));
                     case 20 -> pokemon.getAbilities().set(0, new GrassStorm(pokemon));
-                    case 25 -> pokemon.getAbilities().set(0, new FlowerPower(pokemon));
+                    case 25 -> pokemon.getAbilities().set(1, new FlowerPower(pokemon));
                 }
             }
         }
@@ -50,6 +50,11 @@ public class LearnNewAbility {
             for (int i = 0; i <= pokemon.getStats().getLevel(); i++) {
                 switch (i) {
                     case 1 -> pokemon.addAbility(new Spark(pokemon));
+                    case 5 -> pokemon.addAbility(new Shock(pokemon));
+                    case 10 -> pokemon.addAbility(new ShockWave(pokemon));
+                    case 15 -> pokemon.addAbility(new ElectricBeam(pokemon));
+                    case 20 -> pokemon.getAbilities().set(0, new Thunder(pokemon));
+                    case 25 -> pokemon.getAbilities().set(1, new ThunderStorm(pokemon));
                 }
             }
         }

@@ -1,37 +1,36 @@
 import Ability.LearnNewAbility;
 import Fight.Fight;
+import Person.*;
 import Pokemon.Pokemon;
 import Pokemon.FirePokemon;
 import Pokemon.WaterPokemon;
 import Pokemon.ElectricPokemon;
 import Pokemon.GrassPokemon;
+import Fight.*;
+import SetupPokemons.PokeDex;
 
 public class Main {
     public static void main(String[] args) {
-        Pokemon charmander = new FirePokemon("charmander", 5);
+        PokeDex hoi = new PokeDex();
 
-        Pokemon bulbasaur = new GrassPokemon("bulbasaur" , 12);
+        Person william = new GymLeader("William", "fire");
+        Person electric = new GymLeader("electricMaster", "electric");
+        GiveCharacterPokemon.givePokemons(hoi, william);
+        GiveCharacterPokemon.givePokemons(hoi, electric);
 
-        Pokemon squirtle = new WaterPokemon("squirtle", 5);
+        System.out.println(william.getName() + "'s pokemons");
+        for(int i = 0; i < william.getPokemonList().size(); i++) {
+            System.out.println(william.getPokemonList().get(i).getName() + " | lvl:" + william.getPokemonList().get(i).getStats().getLevel());
+        }
+        System.out.println("------------------");
+        System.out.println(electric.getName() + "'s pokemons");
+        for(int i = 0; i < electric.getPokemonList().size(); i++) {
+            System.out.println(electric.getPokemonList().get(i).getName() + " | lvl:" + electric.getPokemonList().get(i).getStats().getLevel());
+        }
+        System.out.println("Battle begins");
+        System.out.println("-------------");
 
-        Pokemon pikachu = new ElectricPokemon("pikachu" , 3);
-
-        LearnNewAbility charmanderMoves = new LearnNewAbility(charmander);
-        LearnNewAbility squirtleMoves = new LearnNewAbility(squirtle);
-        LearnNewAbility bulbasaurMoves = new LearnNewAbility(bulbasaur);
-        LearnNewAbility pikachuMoves = new LearnNewAbility(pikachu);
-
-
-        Fight pokemonBattle = new Fight(charmander, bulbasaur);
-        charmander.getStats().stats(charmander);
-        bulbasaur.getStats().stats(bulbasaur);
-        pokemonBattle.beginner();
-        pokemonBattle.pokemonBattle();
-
-        Fight pokemonBattle2 = new Fight(squirtle, pikachu);
-        squirtle.getStats().stats(charmander);
-        pikachu.getStats().stats(bulbasaur);
-        pokemonBattle2.beginner();
-        pokemonBattle2.pokemonBattle();
+        PlayerBattle williamhenk = new PlayerBattle(william, electric);
+        williamhenk.playerBattlePvm();
     }
 }

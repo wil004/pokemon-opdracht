@@ -25,6 +25,7 @@ public class DamageCalculation {
             System.out.println("");
             System.out.println(pokemonDefendingPokemon.getName() + " takes " + this.damage + " damage " +
                     pokemonDefendingPokemon.getStats().getHp() + " / " + pokemonDefendingPokemon.getStats().getCurrentHp());
+            System.out.println("");
         }
         else if(pokemonDefendingPokemon.getStrength().contains(attackPokemon.getAbilities().get(attackChoice).getType())) {
             damage = ((attackPokemon.getAbilities().get(attackChoice).getDamage()) - (pokemonDefendingPokemon.getStats().getDefence() / 3)) / 4;
@@ -38,6 +39,7 @@ public class DamageCalculation {
             System.out.println("");
             System.out.println(pokemonDefendingPokemon.getName() + " takes " + this.damage + " damage " +
                     pokemonDefendingPokemon.getStats().getHp() + " / " + pokemonDefendingPokemon.getStats().getCurrentHp());
+            System.out.println("");
         } else {
             damage = (attackPokemon.getAbilities().get(attackChoice).getDamage()) - (pokemonDefendingPokemon.getStats().getDefence() / 3);
             if (damage <= 0) {
@@ -47,8 +49,10 @@ public class DamageCalculation {
             System.out.println(attackPokemon.getName() + " attacks with " + attackPokemon.getAbilities().get(attackChoice).getAbilityName());
             System.out.println(pokemonDefendingPokemon.getName() + " takes " + this.damage + " damage " +
                     pokemonDefendingPokemon.getStats().getHp() + " / " + pokemonDefendingPokemon.getStats().getCurrentHp());
+            System.out.println("");
         }
     }
+
 
 
 }

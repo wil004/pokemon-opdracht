@@ -1,6 +1,6 @@
 package Pokemon;
 
-import Ability.Ability;
+import Ability.*;
 
 import java.util.ArrayList;
 import java.util.List;

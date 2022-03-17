@@ -24,12 +24,12 @@ public class Stats {
        this.leveledUp = false;
     }
 
-    public void stats(Pokemon pokemon) {
+    public void getStats(Pokemon pokemon) {
         System.out.println(pokemon.getName() + " level: " + pokemon.getStats().getLevel());
         System.out.println(pokemon.getName() + " has " + (pokemon.getStats().getSpeed() + 1) + " speed!");
         System.out.println(pokemon.getName() + " has " + pokemon.getStats().getAttack() + " attack!");
         System.out.println(pokemon.getName() + " has " + pokemon.getStats().getDefence() + " defence!");
-        System.out.println(pokemon.getName() + " has " + pokemon.getStats().getHp() + " health points!");
+        System.out.println(pokemon.getName() + " has " + pokemon.getStats().getHp() + "/" + pokemon.getStats().getCurrentHp() + " health points!");
         System.out.println("-----------------------------");
     }
 

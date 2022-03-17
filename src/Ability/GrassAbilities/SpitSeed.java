@@ -9,7 +9,7 @@ public class SpitSeed extends GrassAbility {
 
     public SpitSeed(Pokemon grassPokemon) {
         super(grassPokemon);
-        int baseDamage = 20;
+        int baseDamage = 30;
         this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "SpitSeed";
     }

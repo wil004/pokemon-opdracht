@@ -1,26 +1,25 @@
-package Ability.FireAbilities;
-import Ability.FireAbility;
+package Ability.ElectricAbilities;
+import Ability.ElectricAbility;
 import Pokemon.Pokemon;
 
-public class Ember extends FireAbility {
+public class Thunder extends ElectricAbility {
     private final int damage;
     private final String abilityName;
 
-    public Ember(Pokemon firePokemon) {
-        super(firePokemon);
-        int baseDamage = 25;
+    public Thunder(Pokemon electricPokemon) {
+        super(electricPokemon);
+        int baseDamage = 80;
         this.damage = baseDamage + getDamageCalculation();
-        this.abilityName = "ember";
+        this.abilityName = "Thunder";
     }
 
     @Override
     public int getDamage() {
         return damage;
-    }
+    };
 
     @Override
     public String getAbilityName() {
         return abilityName;
     };
-
 }
