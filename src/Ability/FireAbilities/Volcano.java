@@ -10,7 +10,7 @@ public class Volcano extends FireAbility {
     public Volcano(Pokemon firePokemon) {
         super(firePokemon);
         int baseDamage = 110;
-        this.damage = baseDamage + firePokemon.getStats().getAttack() / firePokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "Volcano";
     }
 

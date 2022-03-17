@@ -5,32 +5,32 @@ import Ability.Ability;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WaterPokemon extends Pokemon {
+public class ElectricPokemon extends Pokemon {
     private String type;
     private final List<String> weakness;
     private final List<String> strength;
 
 
-    public WaterPokemon(String name, int level) {
+    public ElectricPokemon(String name, int level) {
         super(name, level);
         weakness = new ArrayList<>();
         strength = new ArrayList<>();
-        type = "water";
+        type = "electric";
+        weakness.add("fire");
         weakness.add("grass");
-        weakness.add("electric");
-        strength.add("fire");
-        strength.add("water");
+        strength.add("rock");
+        strength.add("air");
     }
 
     @Override
-    public void addAbility(Ability waterAbility) {
-        if(waterAbility.getType().equalsIgnoreCase("water")) {
-            getAbilities().add(waterAbility);
+    public void addAbility(Ability electricAbility) {
+        if(electricAbility.getType().equalsIgnoreCase("electric")) {
+            getAbilities().add(electricAbility);
         }
-            else {
-                System.out.println("This pokemon cannot learn a water ability");
-            }
+        else {
+            System.out.println("This pokemon cannot learn a electric ability");
         }
+    }
 
     @Override
     public String getType() {
@@ -40,7 +40,6 @@ public class WaterPokemon extends Pokemon {
     @Override
     public void setType(String type) {
     }
-
 
     public List<String> getWeakness() {
         return weakness;

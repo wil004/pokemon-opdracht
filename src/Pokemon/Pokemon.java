@@ -11,12 +11,6 @@ public abstract class Pokemon {
     private Stats stats;
     private List<Ability> abilities;
 
-    public Pokemon(String name, int level, List<Ability> abilities) {
-      this.name = name;
-      this.abilities = abilities;
-      this.stats = new Stats(level);
-    }
-
     public Pokemon(String name, int level) {
         this.name = name;
         this.abilities = new ArrayList<>();
@@ -37,17 +31,16 @@ public abstract class Pokemon {
 
     public void setLevelUp() {
       stats.setLevelUp();
-
     }
 
     public abstract void addAbility(Ability ability);
 
     public abstract String getType();
 
-    public abstract void pokemonType();
+    public abstract void setType(String type);
 
-    public abstract String getWeakness();
+    public abstract List<String> getWeakness();
 
-    public abstract String getStrength();
+    public abstract List<String> getStrength();
 
 }

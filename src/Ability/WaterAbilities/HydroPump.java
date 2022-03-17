@@ -10,7 +10,7 @@ public class HydroPump extends WaterAbility {
     public HydroPump(Pokemon waterPokemon) {
         super(waterPokemon);
         int baseDamage = 80;
-        this.damage = baseDamage + waterPokemon.getStats().getAttack() / waterPokemon.getStats().getAttackFactor();
+        this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "HydroPump";
     }
 
