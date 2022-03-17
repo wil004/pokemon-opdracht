@@ -8,7 +8,7 @@ public class Spark extends ElectricAbility {
 
     public Spark(Pokemon electricPokemon) {
         super(electricPokemon);
-        int baseDamage = 20;
+        int baseDamage = 15;
         this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "Spark";
     }

@@ -10,7 +10,7 @@ public class Absorb extends GrassAbility {
         super(grassPokemon);
         int baseDamage = 50;
         this.damage = baseDamage + getDamageCalculation();
-        this.abilityName = "AbsorbHealth";
+        this.abilityName = "Absorb";
     }
 
     @Override

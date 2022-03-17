@@ -1,26 +1,25 @@
-package Ability.FireAbilities;
-import Ability.FireAbility;
+package Ability.ElectricAbilities;
+import Ability.ElectricAbility;
 import Pokemon.Pokemon;
 
-public class Ember extends FireAbility {
+public class Shock extends ElectricAbility {
     private final int damage;
     private final String abilityName;
 
-    public Ember(Pokemon firePokemon) {
-        super(firePokemon);
-        int baseDamage = 25;
+    public Shock(Pokemon electricPokemon) {
+        super(electricPokemon);
+        int baseDamage = 40;
         this.damage = baseDamage + getDamageCalculation();
-        this.abilityName = "ember";
+        this.abilityName = "Shock";
     }
 
     @Override
     public int getDamage() {
         return damage;
-    }
+    };
 
     @Override
     public String getAbilityName() {
         return abilityName;
     };
-
 }

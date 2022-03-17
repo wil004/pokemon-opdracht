@@ -9,7 +9,7 @@ public class GrassWave extends GrassAbility {
 
     public GrassWave(Pokemon grassPokemon) {
         super(grassPokemon);
-        int baseDamage = 30;
+        int baseDamage = 35;
         this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "GrassWave";
     }

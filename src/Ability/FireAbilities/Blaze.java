@@ -9,7 +9,7 @@ public class Blaze extends FireAbility {
 
     public Blaze(Pokemon firePokemon) {
         super(firePokemon);
-        int baseDamage = 65;
+        int baseDamage = 70;
         this.damage = baseDamage + getDamageCalculation();
         this.abilityName = "Blaze";
     }
