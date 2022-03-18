@@ -22,4 +22,9 @@ public class ThunderStorm extends ElectricAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A storm of thundershocks devastating the opponent!");
+    };
 }

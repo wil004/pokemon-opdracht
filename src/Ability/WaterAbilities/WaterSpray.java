@@ -23,4 +23,9 @@ public class WaterSpray extends WaterAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("The opponent gets spraid with water!");
+    };
 }

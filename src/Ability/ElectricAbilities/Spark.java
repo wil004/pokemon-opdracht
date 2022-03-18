@@ -22,4 +22,9 @@ public class Spark extends ElectricAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A simple electric spark hits the opponent!");
+    };
 }

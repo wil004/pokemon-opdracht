@@ -23,4 +23,9 @@ public class FireBlast extends FireAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A huge blast of fire taking over the air.");
+    };
 }

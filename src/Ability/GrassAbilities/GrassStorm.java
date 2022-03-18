@@ -23,4 +23,9 @@ public class GrassStorm extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A breathtaking storm of grass hits the opponent!");
+    };
 }

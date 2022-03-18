@@ -22,4 +22,9 @@ public class Shock extends ElectricAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A powerfull shock strikes the opponent");
+    };
 }

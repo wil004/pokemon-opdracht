@@ -1,5 +1,6 @@
 package Stats;
 
+import Ability.Ability;
 import Pokemon.Pokemon;
 
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class DamageCalculation {
             }
             pokemonDefendingPokemon.getStats().setCurrentHpDamaged(pokemonDefendingPokemon.getStats().getCurrentHp(), damage);
             System.out.println(attackPokemon.getName() + " attacks with " + attackPokemon.getAbilities().get(attackChoice).getAbilityName());
+            attackPokemon.getAbilities().get(attackChoice).abilityDescription();
             System.out.println("");
             System.out.println("Super effective attack!!!");
             System.out.println("");
@@ -34,6 +36,7 @@ public class DamageCalculation {
             }
             pokemonDefendingPokemon.getStats().setCurrentHpDamaged(pokemonDefendingPokemon.getStats().getCurrentHp(), damage);
             System.out.println(attackPokemon.getName() + " attacks with " + attackPokemon.getAbilities().get(attackChoice).getAbilityName());
+            attackPokemon.getAbilities().get(attackChoice).abilityDescription();
             System.out.println("");
             System.out.println("not very effective attack!!!");
             System.out.println("");
@@ -47,6 +50,7 @@ public class DamageCalculation {
             }
             pokemonDefendingPokemon.getStats().setCurrentHpDamaged(pokemonDefendingPokemon.getStats().getCurrentHp(), damage);
             System.out.println(attackPokemon.getName() + " attacks with " + attackPokemon.getAbilities().get(attackChoice).getAbilityName());
+            attackPokemon.getAbilities().get(attackChoice).abilityDescription();
             System.out.println(pokemonDefendingPokemon.getName() + " takes " + this.damage + " damage " +
                     pokemonDefendingPokemon.getStats().getHp() + " / " + pokemonDefendingPokemon.getStats().getCurrentHp());
             System.out.println("");

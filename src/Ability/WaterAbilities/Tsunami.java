@@ -23,4 +23,10 @@ public class Tsunami extends WaterAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A tsunami has been created!");
+    };
+
 }

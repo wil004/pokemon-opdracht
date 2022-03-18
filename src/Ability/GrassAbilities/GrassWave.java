@@ -23,4 +23,9 @@ public class GrassWave extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A wave of grass hits the opponent!");
+    };
 }

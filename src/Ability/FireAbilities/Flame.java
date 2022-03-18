@@ -23,4 +23,9 @@ public class Flame extends FireAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A normal sized flame is summoned!");
+    };
 }

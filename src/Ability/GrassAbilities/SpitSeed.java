@@ -23,4 +23,9 @@ public class SpitSeed extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("Spitting out a seed to the opponent");
+    };
 }

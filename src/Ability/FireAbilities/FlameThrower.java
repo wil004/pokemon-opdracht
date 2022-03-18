@@ -23,4 +23,9 @@ public class FlameThrower extends FireAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A powerful flamethrower!");
+    };
 }

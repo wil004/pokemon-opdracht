@@ -23,4 +23,9 @@ public class FlowerPower extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A storm of roses heads towards the enemy");
+    };
 }

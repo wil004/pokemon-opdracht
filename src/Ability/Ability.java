@@ -24,4 +24,6 @@ public abstract class Ability {
     public abstract String getAbilityName();
 
     public abstract String getType();
+
+    public abstract void abilityDescription();
 }

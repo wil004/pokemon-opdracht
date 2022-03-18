@@ -23,4 +23,9 @@ public class SeedBlast extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A blast of seeds hit the opponent!");
+    };
 }

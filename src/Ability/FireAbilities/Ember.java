@@ -23,4 +23,9 @@ public class Ember extends FireAbility {
         return abilityName;
     };
 
+    @Override
+    public void abilityDescription() {
+        System.out.println("A small flame is summoned!");
+    };
+
 }

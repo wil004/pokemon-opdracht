@@ -23,4 +23,9 @@ public class Blaze extends FireAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A fireblaze starts to haze");
+    };
 }

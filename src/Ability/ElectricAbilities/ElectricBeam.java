@@ -22,4 +22,9 @@ public class ElectricBeam extends ElectricAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("Shoots a beam of electricity to the opponent!");
+    };
 }

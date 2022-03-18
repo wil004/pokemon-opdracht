@@ -13,4 +13,5 @@ public abstract class ElectricAbility extends Ability {
     public String getType() {
         return type;
     }
+
 }

@@ -23,4 +23,9 @@ public class WaterGun extends WaterAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("Watergun attack!");
+    };
 }

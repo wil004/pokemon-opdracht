@@ -23,4 +23,9 @@ public class HydroPump extends WaterAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("A pressured hydro water blast pumps at the opponent!");
+    };
 }

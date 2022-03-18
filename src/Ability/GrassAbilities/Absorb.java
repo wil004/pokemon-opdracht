@@ -22,4 +22,9 @@ public class Absorb extends GrassAbility {
     public String getAbilityName() {
         return abilityName;
     };
+
+    @Override
+    public void abilityDescription() {
+        System.out.println("Absorbing life out of the opponent!");
+    };
 }

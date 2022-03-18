@@ -23,4 +23,8 @@ public class PressurePump extends WaterAbility {
     public String getAbilityName() {
         return abilityName;
     };
+    @Override
+    public void abilityDescription() {
+        System.out.println("A pressured water blast pumps at the opponent!");
+    };
 }
