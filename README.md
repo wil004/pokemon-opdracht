@@ -1,86 +1,82 @@
 ## Inleiding
 
-Je hebt inmiddels geleerd hoe je relaties, overerving en abstracte klassen moet toepassen. In het backend landschap
-worden deze concepten vaak uitgelegd aan de hand van dieren of andere levende wezens. Dus in plaats van de standaard
-hond of kat te kiezen, passen wij deze concepten toe op het onderwerp Pokèmon!
+In de les hebben we het gehad over relaties, overerven en abstracte klassen. Het is in de develop wereld standaard om dit uit te leggen aan de hand van dieren.
 
-## Opdrachtbeschrijving
+In deze opdracht gaan we deze punten toepassen op het onderwerp `Pokemons`
 
-Je gaat een applicatie programmeren die meerdere nieuwe Pokèmon kan aanmaken. Degenen die bekend zijn met Pokèmon weten
-dat deze altijd een _type_ hebben (sterker nog: Pokèmon kunnen meerdere types tegelijk zijn, maar om het niet te moeilijk
-te maken, maken we gebruik van één type per Pokèmon). Voorbeelden van deze typen zijn: Fire 🔥, Water 🌊, Grass 🌿 en
-Electric ⚡.
+## Java
 
-Naast hun type, hebben Pokèmon natuurlijk bepaalde eigenschappen met elkaar gemeen. Daarom maken we gebruik van een
-Super klasse.
+Je gaat een applicatie maken die meerdere nieuwe `Pokemons` kan aanmaken. Voor degene die bekend zijn met `Pokemon` weten dat deze altijd een type hebben (eigenlijk zijn er meerdere types mogelijk, maar om het niet te moeilijk te maken, maken we gebruik van 1 type per pokemon)
 
-![Pokemon.Pokemon!](./assets/pokemon.JPG)
+Ondanks dat deze natuurlijk een type hebben zijn het `Pokemons`, en hebben deze ook bepaalde dingen gemeen met elkaar. Daarom gaan we ook gebruik maken van een `Super klasse`
 
-## Randvoorwaarden
+![Pokemon!](./assets/pokemon.JPG)
 
-De applicatie moet voldoen aan het volgende:
+## Opdracht voorwaarden
 
-- Een Super klasse waarvan minimaal 2 `private` variabelen, 1 constructor, 2 methodes, 2 getters en 2 setters;
-- 4 subklassen die, naast alles dat ze erfen, zelf ook minimaal 4 `private` variabelen, 1 constructor, 2 methodes, 1 `override` methode, 2 getters en 2
-  setters bevatten. _Tip_: wil je wat inspiratie bij het bedenken van variabelen en methodes op het gebied van Pokèmon? Bekijk de
-  inspiratie-sectie hieronder eens.
-- Een `main`-klasse met een `main`-methode;
-- In de `main`-methode worden vier verschillende Pokèmon-objecten van verschillende klassen geïnstantieerd- en gedeclareerd. Met behulp van deze objectnamen kunnen de methodes van de verschillende klassen worden uitgevoerd;
+In de uitgewerkte opdracht moeten minimaal zitten:
 
-Deze methodes mogen `void` teruggeven en een `system.out.println` uitvoeren.
+- 1 `super klasse` welke minimaal 2 `private variabeles`, `constructors`, 2 `methodes` en `getters & setters`
+- 4 `sub klassen` welke minimaal 4 `private variabeles`, `constructors`, 2 `methodes`, 1 `Override methode` en `getters & setters`
+- 1 `main klasse` met 1 `main methode`
+- In de `main methode` worden 4 verschillende `Pokemons` geïnstantieerd en gedeclareerd en wordt voor iedere `Pokemon` methodes aangeroepen
 
-### Inspiratie en tips
+`Deze methodes mogen void returnen en een system.out.println uitvoeren`
 
-Weet je niet wat voor variabelen je jouw klassen kunt meegeven? Denk eens aan:
-
-- `name`
-- `level`
-- `hp`
-- `food`
-- `sound`
-
-Pokèmon kunnen ook ontzettend veel verschillende acties uitvoeren. Zo kun je denken aan de volgende methodes:
-
-- `eats()`
-- `speaks()`
-- `thunderPunch()`
-- `surf()`
-- `leafStorm()`
-- `inferno()`
-- `electroBall()`
-- `pyroBall*()`
-- `solarBeam()`
-- `hydroPump()`
-- `thunder()`
-- `hydroCanon()`
-- `fireLash()`
-- `leechSeed()`
-- `voltTackle()`
-- `rainDance()`
-- `leaveBlade()`
-- `flameThrower()`
 
 ## Stappenplan
-Het is uitdagender om jouw eigen stappenplan te maken, maar als je niet weet waar je wil beginnen kun je dit stappenplan volgen.
-1. Maak een `main`-klasse aan in de `src`-map.
-2. Maak vervolgens binnen de `main`-klasse een `main`-methode aan. Anders kun je de applicatie immers niet draaien!
-3. Maak een Pokèmon Super klasse aan en zorg ervoor dat deze voldoet aan de gestelde randvoorwaarden (
-   zie: [randvoorwaarden](#randvoorwaarden))
-5. Maak de volgende subklassen aan en laat deze voldoen aan de gestelde randvoorwaarden (
-   zie: [randvoorwaarden](#randvoorwaarden)):
 
-- `Pokemon.Pokemon.FirePokemon`
-- `Pokemon.WaterPokemon`
+1. Maak een `Main klasse` aan in de `src` map
+
+2. Maak binnen de `Main klasse` een main methode aan (om je applicatie te kunnen draaien)
+
+3. Maak een `Pokemon klasse` aan
+
+4. Laat deze klassen voldoen aan de voorwaarden van de `super klasse` zoals hierboven vermeld is
+
+5. Maak de volgende klassen aan en laat deze voldoen aan de `sub klassen` zoals hierboven vermeld is: 
+- `FirePokemon`
+- `WaterPokemon`
 - `GrassPokemon`
 - `ElectricPokemon`
 
-5. Instantieer in de `main` methode jouw 4 verschillende Pokèmon met de verschillende attributen.
+5. Instantieer in de `main methode` 4 verschillende `Pokemons` met de verschillende `attributen`
 
-6. Voer in de `main methode` verschillende methodes uit van verschillende `Pokemons`, uit zowel de `subklassen` als uit
-   de `super klasse`.
+6. Voer in de `main methode` verschillende `methodes` uit van verschillende `Pokemons`, uit zowel de `subklassen` als van de `super klasse`
 
-## Bonusopdrachten
 
-1. Bedenk of het mogelijk zou zijn om een abstracte klasse te implementeren in deze appplicatie. En zo ja, implementeer deze abstracte klasse dan in jouw project;
-2. Bedenk of het mogelijk zou zijn om één of meer abstracte methodes te implementeren. En zo ja, implementeer deze!
-3. Probeer een manier te vinden waardoor één Pokèmon twee verschillende types tegelijk zou kunnen zijn. Kun je dit implementeren?
+## Mogelijke Variabelen (geen verplichte)
+
+- name
+- level
+- hp
+- food
+- sound
+
+## Mogelijke Methodes (geen verplichte)
+
+- eats()
+- speaks()
+- thunderPunch()
+- surf()
+- leafStorm()
+- inferno()
+- electroBall()
+- pyroBall*()
+- solarBeam()
+- hydroPump()
+- thunder()
+- hydroCanon()
+- fireLash()
+- leechSeed()
+- voltTackle()
+- rainDance()
+- leaveBlade()
+- flameThrower()
+
+
+## Moeilijkere vragen
+
+Zijn er in deze opdracht mogelijkheden voor een `abstracte klasse`? 
+Zijn er in deze opdracht mogelijkheden voor `abstracte methodes`?
+Is het mogelijk om een `Pokemon` 2 types mee te geven?
