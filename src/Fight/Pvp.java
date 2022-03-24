@@ -22,16 +22,16 @@ public class Pvp extends Fight {
             if ((pokemon1.getStats().getSpeed() + 1) > pokemon2.getStats().getSpeed()) {
                 if (pokemon1.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon1.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon1.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon1.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon1.getAllAbilities().get(i));
                     }
                     int pokemon1Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon1Input, pokemon1, pokemon2);
                 }
                 if (pokemon2.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon2.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon2.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon2.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon2.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon2.getAllAbilities().get(i));
                     }
                     int pokemon2Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon2Input, pokemon2, pokemon1);
@@ -39,8 +39,8 @@ public class Pvp extends Fight {
             } else {
                 if (pokemon2.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon2.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon2.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon2.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon2.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon2.getAllAbilities().get(i));
                     }
                     int pokemon2Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon2Input, pokemon2, pokemon1);
@@ -48,8 +48,8 @@ public class Pvp extends Fight {
 
                 if (pokemon1.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon1.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon1.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon1.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon1.getAllAbilities().get(i));
                     }
                     int pokemon1Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon1Input, pokemon1, pokemon2);

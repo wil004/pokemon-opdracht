@@ -1,7 +1,5 @@
 package Pokemon;
 
-import Ability.Ability;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +20,6 @@ public class GrassPokemon extends Pokemon {
     }
 
 
-    @Override
-    public void addAbility(Ability grassAbility) {
-        if(grassAbility.getType().equalsIgnoreCase("grass")) {
-            getAbilities().add(grassAbility);
-        } else {
-            System.out.println("This pokemon cannot learn this ability");
-        }
-    }
 
     @Override
     public void setType(String type) {

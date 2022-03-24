@@ -1,7 +1,5 @@
 package Pokemon;
 
-import Ability.Ability;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,14 +20,7 @@ public class FirePokemon extends Pokemon {
     }
 
 
-    @Override
-    public void addAbility(Ability fireAbility) {
-        if(fireAbility.getType().equalsIgnoreCase("fire")) {
-            getAbilities().add(fireAbility);
-        } else {
-            System.out.println("This pokemon cannot learn this ability");
-        }
-    }
+
 
     @Override
     public void setType(String type) {

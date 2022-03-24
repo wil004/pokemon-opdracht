@@ -18,12 +18,12 @@ public class Pvm extends Fight {
         ExperienceCalculation pokemon1Xp = new ExperienceCalculation(this.pokemon1);
         System.out.println("Pokemon Battle starts");
         while (getPokemon1Alive() && getPokemon2Alive()) {
-            int computerChoice = getRandom().nextInt(pokemon2.getAbilities().size());
+            int computerChoice = getRandom().nextInt(pokemon2.getAllAbilities().size());
             if ((pokemon1.getStats().getSpeed() + 1) > pokemon2.getStats().getSpeed()) {
                 if (pokemon1.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon1.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon1.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon1.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon1.getAllAbilities().get(i));
                     }
                     int pokemon1Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon1Input, pokemon1, pokemon2);
@@ -38,8 +38,8 @@ public class Pvm extends Fight {
 
                 if (pokemon1.getStats().getCurrentHp() > 0) {
                     System.out.println(pokemon1.getName() + " choose an attack: ");
-                    for (int i = 0; i < pokemon1.getAbilities().size(); i++) {
-                        System.out.println("Typ: " + i + " voor " + pokemon1.getAbilities().get(i).getAbilityName());
+                    for (int i = 0; i < pokemon1.getAllAbilities().size(); i++) {
+                        System.out.println("Typ: " + i + " voor " + pokemon1.getAllAbilities().get(i));
                     }
                     int pokemon1Input = getUserInput().nextInt();
                     getBattle().pokemonAttack(pokemon1Input, pokemon1, pokemon2);

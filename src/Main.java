@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         PokeDex hoi = new PokeDex();
 
-        Person william = new GymLeader("William", "fire");
+        Person william = new Player("William");
         Person electric = new GymLeader("electricMaster", "electric");
         GiveCharacterPokemon.givePokemons(hoi, william);
         GiveCharacterPokemon.givePokemons(hoi, electric);

@@ -22,15 +22,6 @@ public class WaterPokemon extends Pokemon {
         strength.add("water");
     }
 
-    @Override
-    public void addAbility(Ability waterAbility) {
-        if(waterAbility.getType().equalsIgnoreCase("water")) {
-            getAbilities().add(waterAbility);
-        }
-            else {
-                System.out.println("This pokemon cannot learn a water ability");
-            }
-        }
 
     @Override
     public String getType() {

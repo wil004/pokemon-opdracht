@@ -1,6 +1,5 @@
 package Pokemon;
 
-import Ability.Ability;
 import Stats.Stats;
 
 import java.util.ArrayList;
@@ -10,28 +9,28 @@ public abstract class Pokemon {
     private String name;
     private Stats stats;
     private String subType;
-    private List<Ability> abilities;
+
+    private List<String> allAbilities;
 
     public Pokemon(String name, int level) {
         this.name = name;
-        this.abilities = new ArrayList<>();
         this.stats = new Stats(level);
+        this.allAbilities = new ArrayList<>();
     }
 
     public Pokemon(String name, int level, String subType) {
         this.name = name;
-        this.abilities = new ArrayList<>();
         this.stats = new Stats(level);
         this.subType = subType;
+        this.allAbilities = new ArrayList<>();
     }
 
     public String getSubType() {
         return subType;
     }
 
-
-    public List<Ability> getAbilities() {
-        return abilities;
+    public List<String> getAllAbilities() {
+        return allAbilities;
     }
 
     public String getName() {
@@ -45,8 +44,6 @@ public abstract class Pokemon {
     public void setLevelUp() {
       stats.setLevelUp();
     }
-
-    public abstract void addAbility(Ability ability);
 
     public abstract String getType();
 
