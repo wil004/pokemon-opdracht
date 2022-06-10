@@ -1,3 +1,20 @@
+*****Wil004****
+Om mijn kennis te testen en meer uitdaging voor mezelf te creëeren
+Heb ik de applicatie iets complexer gemaakt dan hierboven omschreven.
+Ik heb het mogelijk gemaakt om 2 spelers tegen elkaar te laten battlen of 1 speler tegen
+de computer (gymleader) te laten battelen.
+Iedere speler kan max 6 pokemons hebben.
+
+Ook heb ik een systeem toegevoegd waarmee pokemons kunnen levelen op basis van xp.
+Op basis van hun level wordt hun kracht, snelheid def etc. bepaald.
+Aan de hand van kracht, type en defense wordt de damage berekent in een aparte klasse.
+
+Het pokemongevecht speelt zich af in de terminal clone het project druk op play en probeer het uit!
+
+Omdat ik verder met de leerlijn moest had ik geen tijd de applicatie nog meer uit te breiden.
+Mocht ik hier tijd voor hebben dan zullen pokemons in de volgende update kunnen evolueren.
+****************************************************
+
 ## Inleiding
 
 Je hebt inmiddels geleerd hoe je relaties, overerving en abstracte klassen moet toepassen. In het backend landschap
@@ -59,28 +76,3 @@ Pokèmon kunnen ook ontzettend veel verschillende acties uitvoeren. Zo kun je de
 - `rainDance()`
 - `leaveBlade()`
 - `flameThrower()`
-
-## Stappenplan
-Het is uitdagender om jouw eigen stappenplan te maken, maar als je niet weet waar je wil beginnen kun je dit stappenplan volgen.
-1. Maak een `main`-klasse aan in de `src`-map.
-2. Maak vervolgens binnen de `main`-klasse een `main`-methode aan. Anders kun je de applicatie immers niet draaien!
-3. Maak een Pokèmon Super klasse aan en zorg ervoor dat deze voldoet aan de gestelde randvoorwaarden (
-   zie: [randvoorwaarden](#randvoorwaarden))
-5. Maak de volgende subklassen aan en laat deze voldoen aan de gestelde randvoorwaarden (
-   zie: [randvoorwaarden](#randvoorwaarden)):
-
-- `Pokemon.Pokemon.FirePokemon`
-- `Pokemon.WaterPokemon`
-- `GrassPokemon`
-- `ElectricPokemon`
-
-5. Instantieer in de `main` methode jouw 4 verschillende Pokèmon met de verschillende attributen.
-
-6. Voer in de `main methode` verschillende methodes uit van verschillende `Pokemons`, uit zowel de `subklassen` als uit
-   de `super klasse`.
-
-## Bonusopdrachten
-
-1. Bedenk of het mogelijk zou zijn om een abstracte klasse te implementeren in deze appplicatie. En zo ja, implementeer deze abstracte klasse dan in jouw project;
-2. Bedenk of het mogelijk zou zijn om één of meer abstracte methodes te implementeren. En zo ja, implementeer deze!
-3. Probeer een manier te vinden waardoor één Pokèmon twee verschillende types tegelijk zou kunnen zijn. Kun je dit implementeren?
